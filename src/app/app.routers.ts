@@ -3,12 +3,10 @@ import { BuyComponent } from './buy/buy.component';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-
-
 export const appRouters = [
     {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'sell',
     pathMatch: 'full'
     },
     {
@@ -17,11 +15,11 @@ export const appRouters = [
     },
     {
         path: 'sell',
-        component: SellComponent
+        loadChildren: './sell/sell.module#SellModule'
     },
-    {
-        path: 'buy',
-        component: BuyComponent
-    }
+    // {
+    //     path: 'buy',
+    //     component: BuyComponent
+    // }
 
 ];
